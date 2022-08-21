@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="525.0" prefWidth="698.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.madwesh.app_opener.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Button onAction="#onchromeButtonClick" prefHeight="17.0" prefWidth="54.0" text="chrome" />
+   <Button layoutX="332.0" layoutY="301.0" onAction="#onjupyterButtonClick" prefHeight="17.0" prefWidth="54.0" text="jupyter notebook" />
+
+    <Label fx:id="welcomeText" />
+   <Button layoutX="332.0" layoutY="324.0" onAction="#onTABSButtonClick" prefHeight="17.0" prefWidth="54.0" text="TABS" />
+   <Button layoutX="332.0" layoutY="242.0" onAction="#onCMDButtonClick" prefHeight="17.0" prefWidth="54.0" text="CMD" />
+</VBox>
