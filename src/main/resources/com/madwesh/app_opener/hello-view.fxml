@@ -8,9 +8,20 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Button onAction="#onchromeButtonClick" prefHeight="17.0" prefWidth="54.0" text="chrome" />
-   <Button layoutX="332.0" layoutY="301.0" onAction="#onjupyterButtonClick" prefHeight="17.0" prefWidth="54.0" text="jupyter notebook" />
-
-    <Label fx:id="welcomeText" />
-   <Button layoutX="332.0" layoutY="324.0" onAction="#onTABSButtonClick" prefHeight="17.0" prefWidth="54.0" text="TABS" />
+   <GridPane prefHeight="604.0" prefWidth="681.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="229.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Button alignment="CENTER" onAction="#onTABSButtonClick" prefHeight="215.0" prefWidth="329.0" text="TABS" />
+         <Button onAction="#onjupyterButtonClick" prefHeight="203.0" prefWidth="329.0" text="jupyter notebook" GridPane.columnIndex="1" />
+          <Button onAction="#onchromeButtonClick" prefHeight="281.0" prefWidth="329.0" text="chrome" textAlignment="JUSTIFY" GridPane.rowIndex="1" />
+      </children>
+   </GridPane>
 </VBox>

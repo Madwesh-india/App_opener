@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class HelloController {
     Runtime runtime = Runtime.getRuntime();
+
     @FXML
     private Label welcomeText;
 
@@ -23,8 +24,13 @@ public class HelloController {
         }
     }
 
-    public void onjupyterButtonClick(ActionEvent actionEvent) {
-        CmdTest Cmd = new CmdTest();
+    public void onjupyterButtonClick(ActionEvent actionEvent){
+        try {
+            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"cd /d E:\\PROJECTS && jupyter notebook\"");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     public void onTABSButtonClick(ActionEvent actionEvent) {
